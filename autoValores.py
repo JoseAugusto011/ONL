@@ -357,6 +357,8 @@ if __name__ == "__main__":
     A_sym = np.array([[4, 1, 1],
                       [1, 3, 2],
                       [1, 2, 5]])
+                      
+    #Fazer A(**t) * A
     
     calc_sym = EigenvalueCalculator(A_sym)
     
@@ -368,6 +370,9 @@ if __name__ == "__main__":
     # eigenvalues = calc_sym.sort_eigenvalues(eigenvalues)
     # print("Autovalores ordenados:", eigenvalues)
     
+    
+    
+    # Usar a ideia
     # Passo 2: Calcular os autovetores associados
     eigenvectors = calc_sym.compute_eigenvectors(eigenvalues)
     print("Autovetores (colunas) Associado ao n° - ésimo maior autovalor :\n", eigenvectors)
