@@ -375,27 +375,27 @@ if __name__ == "__main__":
     # Usar a ideia
     # Passo 2: Calcular os autovetores associados
     eigenvectors = calc_sym.compute_eigenvectors(eigenvalues)
-    print("Autovetores (colunas) Associado ao n° - ésimo maior autovalor :\n", eigenvectors)
+    print("Autovetores (colunas) Associado ao i - ésimos  autovalores :\n", eigenvectors)
     
-    # Verificação: Aplicar A * v - lambda * v (deve ser próximo de zero)
-    for i in range(len(eigenvalues)):
-        Av = A_sym @ eigenvectors[:, i]
-        lambda_v = eigenvalues[i] * eigenvectors[:, i]
-        residual = np.linalg.norm(Av - lambda_v)
-        print(f"Resíduo para autovalor {eigenvalues[i]:.6f}: {residual:.2e}")
+    # # Verificação: Aplicar A * v - lambda * v (deve ser próximo de zero)
+    # for i in range(len(eigenvalues)):
+    #     Av = A_sym @ eigenvectors[:, i]
+    #     lambda_v = eigenvalues[i] * eigenvectors[:, i]
+    #     residual = np.linalg.norm(Av - lambda_v)
+    #     print(f"Resíduo para autovalor {eigenvalues[i]:.6f}: {residual:.2e}")
 
 
-    # Matriz reduzida
-    m = 2  # Número de autovetores a considerar
-    calc_sym.print_reducted_matrix(eigenvectors, m)
+    # # Matriz reduzida
+    # m = 2  # Número de autovetores a considerar
+    # calc_sym.print_reducted_matrix(eigenvectors, m)
 
-    # Matriz original reconstruída
-    reconstructed_matrix = calc_sym.return_mn_matrix(eigenvectors, eigenvalues)
+    # # Matriz original reconstruída
+    # reconstructed_matrix = calc_sym.return_mn_matrix(eigenvectors, eigenvalues)
 
-    print("Matriz original reconstruída:\n", reconstructed_matrix)
+    # print("Matriz original reconstruída:\n", reconstructed_matrix)
 
-    # Verificação de reconstrução
+    # # Verificação de reconstrução
 
-    residual_reconstruction = np.linalg.norm(A_sym - reconstructed_matrix)
-    print(f"Resíduo da reconstrução da matriz original: {residual_reconstruction:.2e}")
+    # residual_reconstruction = np.linalg.norm(A_sym - reconstructed_matrix)
+    # print(f"Resíduo da reconstrução da matriz original: {residual_reconstruction:.2e}")
 
