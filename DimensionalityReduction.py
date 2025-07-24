@@ -577,16 +577,16 @@ if __name__ == "__main__":
 
   
     
-    # Af = AnaliseFatorial(X, 3,tipo_Matriz="Covariancia")  # Exemplo de redução para 3 dimensões
-    # # print("Autovalores:", Af.autovalores)
-    # # print("Autovetores:", Af.autovetores)
+    Af = AnaliseFatorial(X, 3,tipo_Matriz="Covariancia")  # Exemplo de redução para 3 dimensões
+    # print("Autovalores:", Af.autovalores)
+    # print("Autovetores:", Af.autovetores)
     
-    # matriz_reduzida = Af.run()  # Executa a análise fatorial e obtém a matriz reduzida
-    # print("TauQ:", Af.TauQ)  # Proporção de variância explicada
-    # print("Matriz reduzida:\n", matriz_reduzida)
+    matriz_reduzida = Af.run()  # Executa a análise fatorial e obtém a matriz reduzida
+    print("TauQ:", Af.TauQ)  # Proporção de variância explicada
+    print("Matriz reduzida:\n", matriz_reduzida)
 
-    # plotador = analiseInfo(matriz_reduzida)  # Cria uma instância da classe analiseInfo com a matriz reduzida
-    # plotador.plota_vetores_redimensionados()  # Plota os vetores
+    plotador = analiseInfo(matriz_reduzida)  # Cria uma instância da classe analiseInfo com a matriz reduzida
+    plotador.plota_vetores_redimensionados()  # Plota os vetores
 
     pca = PCA(X,3)
     matriz_reduzida = pca.run()
